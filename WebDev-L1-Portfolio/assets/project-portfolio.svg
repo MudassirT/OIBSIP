@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pfBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d131f"/>
+      <stop offset="100%" stop-color="#080c14"/>
+    </linearGradient>
+    <linearGradient id="pfCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="pfViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="pfScreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="600" height="360" rx="16" fill="url(#pfBg)"/>
+
+  <!-- Code Editor Frame (Left) -->
+  <rect x="28" y="32" width="300" height="296" rx="12" fill="#141d2f" stroke="rgba(255,255,255,0.08)"/>
+  <!-- Editor Header -->
+  <rect x="28" y="32" width="300" height="36" rx="12" fill="#0f172a"/>
+  <rect x="28" y="58" width="300" height="10" fill="#0f172a"/>
+  <circle cx="48" cy="50" r="4.5" fill="#ef4444"/>
+  <circle cx="64" cy="50" r="4.5" fill="#f59e0b"/>
+  <circle cx="80" cy="50" r="4.5" fill="#10b981"/>
+  <rect x="105" y="42" width="90" height="18" rx="4" fill="#1e293b"/>
+  <text x="116" y="55" fill="#38bdf8" font-family="monospace" font-size="10">portfolio.css</text>
+
+  <!-- Syntax Highlighting Lines -->
+  <g font-family="monospace" font-size="10.5">
+    <text x="44" y="88" fill="#64748b">01 <tspan fill="#ec4899">:root</tspan> <tspan fill="#f8fafc">{</tspan></text>
+    <text x="44" y="108" fill="#64748b">02   <tspan fill="#38bdf8">--accent</tspan>: <tspan fill="#a7f3d0">#00f2fe</tspan>;</text>
+    <text x="44" y="128" fill="#64748b">03   <tspan fill="#38bdf8">--glow</tspan>: <tspan fill="#a7f3d0">#8b5cf6</tspan>;</text>
+    <text x="44" y="148" fill="#64748b">04   <tspan fill="#38bdf8">--font</tspan>: <tspan fill="#fdba74">'Outfit'</tspan>;</text>
+    <text x="44" y="168" fill="#64748b">05 <tspan fill="#f8fafc">}</tspan></text>
+    <text x="44" y="196" fill="#64748b">06 <tspan fill="#ec4899">.dev-hero</tspan> <tspan fill="#f8fafc">{</tspan></text>
+    <text x="44" y="216" fill="#64748b">07   <tspan fill="#94a3b8">display</tspan>: <tspan fill="#38bdf8">grid</tspan>;</text>
+    <text x="44" y="236" fill="#64748b">08   <tspan fill="#94a3b8">animation</tspan>: <tspan fill="#c084fc">fadeIn 1s</tspan>;</text>
+    <text x="44" y="256" fill="#64748b">09   <tspan fill="#94a3b8">backdrop-filter</tspan>: <tspan fill="#38bdf8">blur(12px)</tspan>;</text>
+    <text x="44" y="276" fill="#64748b">10 <tspan fill="#f8fafc">}</tspan></text>
+    <text x="44" y="302" fill="#10b981">/* Zero JS • 100% Pure CSS */</text>
+  </g>
+
+  <!-- Mobile Device Mockup (Right) -->
+  <g transform="translate(352, 28)">
+    <rect x="0" y="0" width="220" height="304" rx="28" fill="#090d16" stroke="rgba(0, 242, 254, 0.4)" stroke-width="2.5"/>
+    <!-- Speaker & Camera notch -->
+    <rect x="75" y="10" width="70" height="8" rx="4" fill="#1e293b"/>
+    <circle cx="130" cy="14" r="2.5" fill="#334155"/>
+    
+    <!-- Phone Screen -->
+    <rect x="12" y="28" width="196" height="258" rx="16" fill="url(#pfScreen)"/>
+    
+    <!-- Header simulation -->
+    <rect x="22" y="38" width="50" height="10" rx="3" fill="url(#pfCyan)"/>
+    <circle cx="190" cy="43" r="3" fill="#ffffff"/>
+    <circle cx="180" cy="43" r="3" fill="#ffffff"/>
+
+    <!-- Avatar circle -->
+    <circle cx="110" cy="85" r="24" fill="#141d2f" stroke="url(#pfCyan)" stroke-width="2"/>
+    <circle cx="110" cy="85" r="16" fill="url(#pfViolet)"/>
+    <text x="110" y="90" font-family="sans-serif" font-weight="bold" font-size="12" fill="#ffffff" text-anchor="middle">MA</text>
+
+    <!-- Name & Tagline -->
+    <rect x="55" y="120" width="110" height="8" rx="4" fill="#ffffff"/>
+    <rect x="40" y="134" width="140" height="6" rx="3" fill="#64748b"/>
+    <rect x="60" y="146" width="100" height="6" rx="3" fill="#64748b"/>
+
+    <!-- Mini Buttons -->
+    <rect x="42" y="165" width="62" height="18" rx="6" fill="url(#pfCyan)"/>
+    <rect x="114" y="165" width="62" height="18" rx="6" fill="#334155"/>
+
+    <!-- Mini Skill cards -->
+    <rect x="26" y="200" width="78" height="36" rx="6" fill="#141e33" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="114" y="200" width="78" height="36" rx="6" fill="#141e33" stroke="rgba(255,255,255,0.06)"/>
+    <rect x="34" y="212" width="40" height="6" rx="3" fill="url(#pfCyan)"/>
+    <rect x="122" y="212" width="40" height="6" rx="3" fill="url(#pfViolet)"/>
+    
+    <!-- Bottom indicator -->
+    <rect x="80" y="275" width="60" height="4" rx="2" fill="#64748b"/>
+  </g>
+</svg>
