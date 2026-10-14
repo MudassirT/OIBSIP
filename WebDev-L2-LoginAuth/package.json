@@ -1,0 +1,28 @@
+{
+  "name": "securegate-login-auth",
+  "version": "1.0.0",
+  "description": "SecureGate - Login Authentication System with Node.js, Express, and JSON file store (Oasis Infobyte Level 2 Task 4)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "authentication",
+    "express",
+    "bcryptjs",
+    "session",
+    "oasis-infobyte"
+  ],
+  "author": "Mudassir Ahmed",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.13.0"
+  }
+}
