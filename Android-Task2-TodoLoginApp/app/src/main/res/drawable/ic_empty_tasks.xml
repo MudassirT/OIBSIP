@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Clipboard Outline -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M35,25h50c5.5,0 10,4.5 10,10v65c0,5.5 -4.5,10 -10,10H35c-5.5,0 -10,-4.5 -10,-10V35c0,-5.5 4.5,-10 10,-10z" />
+    <path
+        android:strokeColor="@color/primary"
+        android:strokeWidth="4"
+        android:pathData="M35,25h50c5.5,0 10,4.5 10,10v65c0,5.5 -4.5,10 -10,10H35c-5.5,0 -10,-4.5 -10,-10V35c0,-5.5 4.5,-10 10,-10z" />
+    <!-- Clip on top -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M48,16h24c2.2,0 4,1.8 4,4v8c0,2.2 -1.8,4 -4,4H48c-2.2,0 -4,-1.8 -4,-4v-8c0,-2.2 1.8,-4 4,-4z" />
+    <!-- Checklist items inside clipboard -->
+    <path
+        android:strokeColor="@color/secondary"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:pathData="M40,46l5,5l10,-10" />
+    <path
+        android:strokeColor="@color/text_muted"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:pathData="M62,48h20" />
+    <path
+        android:strokeColor="@color/primary"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:pathData="M40,66l5,5l10,-10" />
+    <path
+        android:strokeColor="@color/text_muted"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:pathData="M62,68h20" />
+    <!-- Empty dotted line -->
+    <path
+        android:strokeColor="@color/text_muted"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:pathData="M42,88h40" />
+</vector>

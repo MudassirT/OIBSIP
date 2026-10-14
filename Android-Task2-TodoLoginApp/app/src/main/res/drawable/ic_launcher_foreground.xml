@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.55"
+        android:scaleY="0.55"
+        android:translateX="24.3"
+        android:translateY="24.3">
+        <!-- Shield Background -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M54,12L24,25v26.5c0,21.5 13.5,41.5 30,46.5c16.5,-5 30,-25 30,-46.5V25L54,12z" />
+        <!-- Inner Shield Accent -->
+        <path
+            android:fillColor="#EEF2FF"
+            android:pathData="M54,18L29,29v22.5c0,18.5 11.5,35.5 25,40c13.5,-4.5 25,-21.5 25,-40V29L54,18z" />
+        <!-- Vault Checkmark in Indigo -->
+        <path
+            android:fillColor="#4F46E5"
+            android:pathData="M48.5,61.5L37,50l-4.2,4.2L48.5,70l26.7,-26.7l-4.2,-4.2L48.5,61.5z" />
+    </group>
+</vector>

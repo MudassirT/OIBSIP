@@ -1,0 +1,83 @@
+<resources>
+    <!-- App Details -->
+    <string name="app_name">TaskVault</string>
+    <string name="app_tagline">Secure &amp; Private Task Management</string>
+
+    <!-- Authentication - Login -->
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to access your secure tasks</string>
+    <string name="label_email_or_username">Email</string>
+    <string name="hint_email">you@example.com</string>
+    <string name="label_password">Password</string>
+    <string name="hint_password">••••••••</string>
+    <string name="btn_login">Sign In</string>
+    <string name="btn_logging_in">Signing in…</string>
+    <string name="link_to_signup">Don\'t have an account? <b>Sign up</b></string>
+    <string name="error_invalid_credentials">Invalid email or password</string>
+    <string name="error_empty_login_identifier">Please enter your email</string>
+    <string name="error_empty_password">Please enter your password</string>
+    <string name="msg_signup_success">Account registered successfully! Please sign in.</string>
+
+    <!-- Authentication - Sign Up -->
+    <string name="signup_title">Create Account</string>
+    <string name="signup_subtitle">Organize your life with encrypted protection</string>
+    <string name="label_name">Full Name</string>
+    <string name="hint_name">John Doe</string>
+    <string name="label_confirm_password">Confirm Password</string>
+    <string name="btn_register">Create Account</string>
+    <string name="btn_registering">Creating account…</string>
+    <string name="link_to_login">Already have an account? <b>Log in</b></string>
+    <string name="error_empty_name">Full name is required</string>
+    <string name="error_empty_email">Email is required</string>
+    <string name="error_invalid_email">Please enter a valid email address</string>
+    <string name="error_password_too_short">Password must be at least 8 characters</string>
+    <string name="error_password_no_digit">Password must contain at least 1 number</string>
+    <string name="error_empty_confirm_password">Please confirm your password</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_email_already_exists">An account with this email already exists</string>
+    <string name="error_registration_failed">Registration failed. Please try again.</string>
+
+    <!-- Main Activity / Tasks -->
+    <string name="welcome_user">Welcome, %1$s!</string>
+    <string name="task_count_summary">%1$d pending, %2$d completed</string>
+    <string name="section_all_tasks">My Tasks</string>
+    <string name="badge_pending">%1$d Pending</string>
+    <string name="badge_completed">%1$d Completed</string>
+    <string name="empty_tasks_title">No tasks yet</string>
+    <string name="empty_tasks_subtitle">Tap + to add your first one.</string>
+    <string name="task_deleted_message">Task deleted</string>
+    <string name="action_undo">Undo</string>
+
+    <!-- Add / Edit Task Dialog -->
+    <string name="dialog_add_task_title">Add New Task</string>
+    <string name="dialog_edit_task_title">Edit Task</string>
+    <string name="label_task_title">Title</string>
+    <string name="hint_task_title">What needs to be done?</string>
+    <string name="error_empty_task_title">Task title cannot be empty</string>
+    <string name="error_task_title_too_long">Title cannot exceed 100 characters</string>
+    <string name="label_task_notes">Notes (Optional)</string>
+    <string name="hint_task_notes">Add context, details, or steps…</string>
+    <string name="error_task_notes_too_long">Notes cannot exceed 500 characters</string>
+    <string name="btn_save_task">Add Task</string>
+    <string name="btn_update_task">Save Changes</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="msg_task_saved">Task added successfully</string>
+    <string name="msg_task_updated">Task updated</string>
+
+    <!-- Delete Confirmation Dialog -->
+    <string name="dialog_delete_title">Delete Task</string>
+    <string name="dialog_delete_message">Are you sure you want to permanently delete this task?</string>
+    <string name="btn_delete">Delete</string>
+
+    <!-- Logout Dialog & Menu -->
+    <string name="menu_logout">Log Out</string>
+    <string name="dialog_logout_title">Log Out</string>
+    <string name="dialog_logout_message">Are you sure you want to sign out of TaskVault?</string>
+
+    <!-- Accessibility / Content Descriptions -->
+    <string name="cd_app_logo">TaskVault application shield logo</string>
+    <string name="cd_add_task">Add new task</string>
+    <string name="cd_task_checkbox">Toggle task completed</string>
+    <string name="cd_delete_task">Delete task</string>
+    <string name="cd_empty_state">Empty state illustration</string>
+</resources>

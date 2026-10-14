@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <!-- Rounded Shield -->
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M32,4L12,13v19c0,16.5 10.5,31.5 20,35c9.5,-3.5 20,-18.5 20,-35V13L32,4z" />
+    <!-- Checkmark inside -->
+    <path
+        android:fillColor="@color/on_primary"
+        android:pathData="M27.5,39.5L18.5,30.5l3.2,-3.2l5.8,5.8l14.8,-14.8l3.2,3.2L27.5,39.5z" />
+</vector>
