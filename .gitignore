@@ -1,0 +1,97 @@
+# Oasis Infobyte Internship (OIBSIP) - Root .gitignore
+# Mudassir Ahmed
+
+# Dependencies
+node_modules/
+**/node_modules/
+.pnp
+.pnp.js
+
+# Build Outputs & Bundles
+dist/
+**/dist/
+build/
+**/build/
+app/build/
+**/app/build/
+out/
+**/out/
+.next/
+**/next/
+.output/
+**/output/
+
+# Android & Gradle
+.gradle/
+**/.gradle/
+.idea/
+**/.idea/
+*.iml
+**/*.iml
+local.properties
+**/local.properties
+.cxx/
+**/.cxx/
+captures/
+**/captures/
+*.apk
+**/*.apk
+*.ap_
+**/*.ap_
+*.aab
+**/*.aab
+*.dex
+**/*.dex
+
+# Keystores & Signing Keys
+*.keystore
+**/*.keystore
+*.jks
+**/*.jks
+*.key
+**/*.key
+*.pem
+**/*.pem
+
+# Environment Secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Runtime & User Data Stores
+data/users.json
+**/data/users.json
+users.json
+**/users.json
+
+# Logs
+logs/
+**/logs/
+*.log
+**/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS & Editor Files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+**/Thumbs.db
+.vscode/
+**/.vscode/
+
+# Legacy task wrapper folders (local workspace only)
+/AAD Task 2/
+/AD Task 4/
+/Level 2 Task 1/
+/Level 2 Task 2/
+/Level 2 Task 3/
+/level 2 Task 4/
+/Level 3 Task 1/
+/Task 2 Oasis/
+/Task 3 Oasis/
+/Task1 Oasis/
