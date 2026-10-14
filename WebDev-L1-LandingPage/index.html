@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaFlow is an AI-powered task and productivity platform that eliminates daily friction, automates smart prioritization, and accelerates team velocity.">
+  <meta name="keywords" content="task management, AI productivity, sprint planning, workflow automation, NovaFlow">
+  <meta name="author" content="Mudassir Ahmed">
+  <title>NovaFlow — AI-Powered Task &amp; Productivity Intelligence</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans (Headings/UI) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. STICKY HEADER & ACCESSIBLE NAVIGATION (PURE CSS RESPONSIVE)
+       ========================================================================= -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="NovaFlow Home">
+        <span class="logo-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </span>
+        <span class="brand-name">Nova<span class="gradient-text">Flow</span></span>
+      </a>
+
+      <!-- Pure CSS Hamburger Toggle (Zero JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="hamburger-btn" aria-label="Open navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+
+      <!-- Main Navigation -->
+      <nav class="nav-menu" aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-secondary nav-btn-login">Sign In</a>
+          <a href="#contact" class="btn btn-primary nav-btn-cta">Get Started Free</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================= -->
+  <main id="main-content">
+
+    <!-- =======================================================================
+         2. HERO SECTION
+         ======================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="hero-background-glow" aria-hidden="true"></div>
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <!-- Live Badge -->
+          <div class="hero-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <span class="badge-text">NovaFlow 2.0 Released &bull; Autonomous Sprint Intelligence</span>
+          </div>
+
+          <!-- Main Headlines -->
+          <h1 class="hero-title">
+            Work in Flow. <br>
+            Let AI Handle the <span class="gradient-text">Friction.</span>
+          </h1>
+          <p class="hero-subtitle">
+            NovaFlow harmonizes task prioritization, automated dependency tracking, and capacity forecasting into one intuitive hub. Spend less time managing work and more time shipping breakthroughs.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary btn-large hero-btn-main">
+              <span>Start 14-Day Free Trial</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#features" class="btn btn-secondary btn-large hero-btn-demo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"></polygon>
+              </svg>
+              <span>Explore Features</span>
+            </a>
+          </div>
+
+          <!-- Micro-Trust Bar -->
+          <div class="hero-trust-list">
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="trust-icon" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>No credit card required</span>
+            </div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="trust-icon" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Instant 2-minute setup</span>
+            </div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="trust-icon" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Enterprise SOC2 compliant</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive App Preview Mockup (Pure Semantic CSS) -->
+        <div class="hero-visual">
+          <div class="mockup-frame">
+            <!-- Mockup Window Header -->
+            <div class="mockup-header">
+              <div class="window-controls" aria-hidden="true">
+                <span class="control-dot dot-red"></span>
+                <span class="control-dot dot-yellow"></span>
+                <span class="control-dot dot-green"></span>
+              </div>
+              <div class="mockup-status-badge">
+                <span class="status-pulse" aria-hidden="true"></span>
+                <span>NovaFlow Neural Engine &bull; Live Sync</span>
+              </div>
+            </div>
+
+            <!-- Mockup Window Body -->
+            <div class="mockup-body">
+              <!-- Top Metrics Bar -->
+              <div class="preview-metrics-grid">
+                <div class="metric-mini-card">
+                  <span class="mini-label">Active Sprint Velocity</span>
+                  <div class="mini-val-row">
+                    <span class="mini-val">96.4%</span>
+                    <span class="mini-trend positive">+14% vs avg</span>
+                  </div>
+                  <div class="progress-track" aria-hidden="true">
+                    <div class="progress-fill" style="width: 86%;"></div>
+                  </div>
+                </div>
+                <div class="metric-mini-card">
+                  <span class="mini-label">Time Saved This Week</span>
+                  <div class="mini-val-row">
+                    <span class="mini-val">18.5 hrs</span>
+                    <span class="mini-trend highlight">Auto-Triaged</span>
+                  </div>
+                  <div class="progress-track" aria-hidden="true">
+                    <div class="progress-fill fill-secondary" style="width: 72%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- AI Task Stream -->
+              <div class="preview-tasks-list">
+                <div class="task-card task-card-ai">
+                  <div class="task-tag ai-tag">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/>
+                    </svg>
+                    <span>AI Autonomous Action</span>
+                  </div>
+                  <div class="task-details">
+                    <h4 class="task-title">Re-sequencing Sprint Backlog for v2.4 Launch</h4>
+                    <p class="task-desc">Resolved blocker in authentication microservice. Shifted 4 dependent user stories forward.</p>
+                  </div>
+                  <span class="task-status-pill status-optimized">Optimized</span>
+                </div>
+
+                <div class="task-card">
+                  <div class="task-checkbox-mock" aria-hidden="true"></div>
+                  <div class="task-details">
+                    <h4 class="task-title">Implement Webhook Event Architecture</h4>
+                    <p class="task-desc">Assigned to Core Infrastructure &bull; High Priority</p>
+                  </div>
+                  <span class="task-status-pill status-progress">In Progress</span>
+                </div>
+
+                <div class="task-card">
+                  <div class="task-checkbox-mock checked" aria-hidden="true">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div class="task-details">
+                    <h4 class="task-title completed-title">Security Audit &amp; OAuth 2.1 Compliance</h4>
+                    <p class="task-desc">Completed 12m ago &bull; Verified by AI Inspector</p>
+                  </div>
+                  <span class="task-status-pill status-done">Done</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         LOGO CLOUD / SOCIAL PROOF STRIP
+         ======================================================================= -->
+    <section class="social-proof-strip" aria-label="Trusted companies">
+      <div class="container proof-container">
+        <p class="proof-label">Accelerating productivity for 10,000+ teams across modern technology</p>
+        <div class="company-logos-row">
+          <div class="company-logo-item">
+            <svg width="130" height="32" viewBox="0 0 130 32" fill="currentColor" aria-label="HyperScale Logo">
+              <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="17" letter-spacing="1">HYPERSCALE</text>
+            </svg>
+          </div>
+          <div class="company-logo-item">
+            <svg width="115" height="32" viewBox="0 0 115 32" fill="currentColor" aria-label="CloudPeak Logo">
+              <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="17" letter-spacing="1">CLOUDPEAK</text>
+            </svg>
+          </div>
+          <div class="company-logo-item">
+            <svg width="120" height="32" viewBox="0 0 120 32" fill="currentColor" aria-label="PulseLogic Logo">
+              <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="17" letter-spacing="1">PULSELOGIC</text>
+            </svg>
+          </div>
+          <div class="company-logo-item">
+            <svg width="110" height="32" viewBox="0 0 110 32" fill="currentColor" aria-label="NextWave Logo">
+              <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="17" letter-spacing="1">NEXTWAVE</text>
+            </svg>
+          </div>
+          <div class="company-logo-item">
+            <svg width="115" height="32" viewBox="0 0 115 32" fill="currentColor" aria-label="Veloce AI Logo">
+              <text x="0" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="17" letter-spacing="1">VELOCE.AI</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. FEATURES SECTION (CSS GRID OF 6 CARDS)
+         ======================================================================= -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <header class="section-header">
+          <span class="section-tag">CORE CAPABILITIES</span>
+          <h2 class="section-title">Built to Eliminate Friction at Every Layer</h2>
+          <p class="section-description">
+            Traditional task boards require endless manual updating. NovaFlow runs intelligent ambient agents in the background so your team stays completely in flow.
+          </p>
+        </header>
+
+        <!-- Feature Grid (6 Cards) -->
+        <div class="features-grid">
+          
+          <!-- Card 1 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Autonomous Priority Matrix</h3>
+            <p class="feature-text">
+              Our continuous learning model evaluates urgency, dependency graphs, and team capacity to sequence daily tasks in true business impact order.
+            </p>
+            <div class="feature-badge">
+              <span>Dynamic Triage</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                <line x1="9" y1="10" x2="15" y2="10"></line>
+                <line x1="12" y1="7" x2="12" y2="13"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Context-Aware Standup Digest</h3>
+            <p class="feature-text">
+              Zero manual typing required. NovaFlow correlates completed GitHub PRs, Figma revisions, and Slack commits into executive summaries in real time.
+            </p>
+            <div class="feature-badge">
+              <span>Zero-Touch Sync</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Predictive Bottleneck Shield</h3>
+            <p class="feature-text">
+              Spot project delivery risks 14 days before deadlines happen. NovaFlow models developer velocity variance and alerts leads with actionable mitigations.
+            </p>
+            <div class="feature-badge">
+              <span>94% Risk Detection</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Natural Language Directives</h3>
+            <p class="feature-text">
+              Turn conversations into structured epics instantly. Type &ldquo;Spin up staging rollout by next Tuesday assigned to David&rdquo; and watch tasks auto-populate.
+            </p>
+            <div class="feature-badge">
+              <span>NLP Execution</span>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Dynamic Workload Balancing</h3>
+            <p class="feature-text">
+              Prevent engineer burnout before it strikes. Intelligent workload distribution analyzes mental fatigue markers and redistributes spikes evenly.
+            </p>
+            <div class="feature-badge">
+              <span>Burnout Protection</span>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="feature-card">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Universal Ecosystem Connectors</h3>
+            <p class="feature-text">
+              Plug directly into your existing toolchain. Native bi-directional hooks for GitHub, Linear, Jira, Slack, Notion, and VS Code with zero latency.
+            </p>
+            <div class="feature-badge">
+              <span>40+ Integrations</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. ABOUT SECTION (MISSION, PILLARS & STATS)
+         ======================================================================= -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Story & Philosophy Column -->
+          <div class="about-content">
+            <span class="section-tag">ABOUT NOVAFLOW</span>
+            <h2 class="section-title">Engineered for Teams That Move at the Speed of Thought</h2>
+            <p class="about-lead">
+              Modern product teams waste up to 58% of their workday talking about work, organizing tickets, and toggling between tabs instead of building.
+            </p>
+            <p class="about-body">
+              NovaFlow was founded by engineers and designers who believed artificial intelligence shouldn't just summarize yesterday's meetings—it should actively orchestrate tomorrow's victories. By combining high-speed deterministic workflow graphs with generative language models, NovaFlow frees your mind for deep, creative problem solving.
+            </p>
+
+            <!-- Key Principles Checklist -->
+            <ul class="about-checklist">
+              <li class="check-item">
+                <span class="check-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <div class="check-text">
+                  <strong>Zero-Context-Switch Philosophy:</strong> All updates, tasks, and communications are synchronized at the edge without breaking deep flow state.
+                </div>
+              </li>
+              <li class="check-item">
+                <span class="check-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <div class="check-text">
+                  <strong>Strict Enterprise Privacy:</strong> Your proprietary source code and ticket discussions are never used to train public language models.
+                </div>
+              </li>
+              <li class="check-item">
+                <span class="check-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <div class="check-text">
+                  <strong>Frictionless Adoption:</strong> Works smoothly alongside existing company boards with frictionless one-click migration.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Proof Metrics & Visual Stats Column -->
+          <div class="about-stats-panel">
+            <div class="stat-card">
+              <div class="stat-number">42%</div>
+              <div class="stat-label">Reduction in Context Switching</div>
+              <p class="stat-desc">Engineers report spending nearly double the uninterrupted time inside their code editors and design canvases.</p>
+            </div>
+
+            <div class="stat-card stat-card-highlight">
+              <div class="stat-number gradient-text">3.8x</div>
+              <div class="stat-label">Accelerated Sprint Turnaround</div>
+              <p class="stat-desc">Predictive obstacle detection prevents multi-day blocker standstills across cross-functional product squads.</p>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number">99.98%</div>
+              <div class="stat-label">Guaranteed High-Availability Uptime</div>
+              <p class="stat-desc">Enterprise-grade distributed infrastructure with real-time multi-region replication and SOC2 certification.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. TESTIMONIALS SECTION (3 HIGH-FIDELITY CARDS)
+         ======================================================================= -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <header class="section-header">
+          <span class="section-tag">TESTIMONIALS</span>
+          <h2 class="section-title">Trusted by Tech Leaders and Innovators</h2>
+          <p class="section-description">
+            Discover how visionary engineering and product organizations use NovaFlow to maintain relentless execution velocity.
+          </p>
+        </header>
+
+        <!-- Testimonial Grid (3 Cards) -->
+        <div class="testimonials-grid">
+          
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card">
+            <div class="rating-stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              &ldquo;NovaFlow completely eliminated our weekly standup chaos. Our engineering squad reclaimed over six productive hours every single week, and our release cycle predictability skyrocketed.&rdquo;
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar-wrapper">
+                <!-- Fallback SVG Portrait Icon if remote image is blocked, plus high-res photo -->
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=140&h=140&q=80" 
+                     alt="Photo of Elena Rostova, VP of Engineering at ScaleSphere" 
+                     class="author-avatar" 
+                     loading="lazy" 
+                     width="52" 
+                     height="52">
+              </div>
+              <div class="author-meta">
+                <span class="author-name">Elena Rostova</span>
+                <span class="author-role">VP of Engineering &bull; ScaleSphere</span>
+                <span class="author-verification">&check; Verified Enterprise Customer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card testimonial-card-featured">
+            <div class="rating-stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              &ldquo;The predictive bottleneck alerts alone paid for NovaFlow in the first ten days. We uncovered three major API integration roadblocks a full week before our global launch date.&rdquo;
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=140&h=140&q=80" 
+                     alt="Photo of Marcus Chen, Principal Architect at Lumina Cloud" 
+                     class="author-avatar" 
+                     loading="lazy" 
+                     width="52" 
+                     height="52">
+              </div>
+              <div class="author-meta">
+                <span class="author-name">Marcus Chen</span>
+                <span class="author-role">Principal Architect &bull; Lumina Cloud</span>
+                <span class="author-verification">&check; Verified Enterprise Customer</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card">
+            <div class="rating-stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <blockquote class="testimonial-quote">
+              &ldquo;As an early-stage founder managing 20 different priorities every hour, NovaFlow feels like having an elite Chief of Staff organizing every single team initiative with superhuman clarity.&rdquo;
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-avatar-wrapper">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=140&h=140&q=80" 
+                     alt="Photo of Priya Patel, Founder and CEO at PulseFlow Studio" 
+                     class="author-avatar" 
+                     loading="lazy" 
+                     width="52" 
+                     height="52">
+              </div>
+              <div class="author-meta">
+                <span class="author-name">Priya Patel</span>
+                <span class="author-role">Founder &amp; CEO &bull; PulseFlow Studio</span>
+                <span class="author-verification">&check; Verified Enterprise Customer</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. CONTACT & CONVERSION SECTION (FORM + DIRECT CHANNELS)
+         ======================================================================= -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card-wrapper">
+          
+          <!-- Contact Left: Messaging & Direct Details -->
+          <div class="contact-info-col">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2 class="contact-title">Ready to Experience Uninterrupted Velocity?</h2>
+            <p class="contact-text">
+              Whether you want to roll out NovaFlow across your 500-person engineering department or try it with a 5-person agile pod, our technical specialists are here to guide you.
+            </p>
+
+            <div class="contact-channels">
+              <div class="channel-item">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">Direct Email Support</span>
+                  <a href="mailto:contact@novaflow.ai" class="channel-link">contact@novaflow.ai</a>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">Enterprise Advisory Line</span>
+                  <a href="tel:+18005550199" class="channel-link">+1 (800) 555-0199</a>
+                </div>
+              </div>
+
+              <div class="channel-item">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-label">Global Headquarters</span>
+                  <span class="channel-value">555 Mission St, San Francisco, CA 94105</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Right: Pure HTML Interactive Form -->
+          <div class="contact-form-col">
+            <form class="contact-form" action="#contact" method="GET">
+              <h3 class="form-title">Request Your Personalized Pilot</h3>
+              <p class="form-subtitle">Get instant access to NovaFlow Enterprise for 14 days.</p>
+
+              <div class="form-group">
+                <label for="full-name" class="form-label">Full Name</label>
+                <input type="text" id="full-name" name="name" class="form-input" placeholder="Sarah Jenkins" required>
+              </div>
+
+              <div class="form-group">
+                <label for="work-email" class="form-label">Work Email</label>
+                <input type="email" id="work-email" name="email" class="form-input" placeholder="sarah@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="team-size" class="form-label">Team Size</label>
+                <select id="team-size" name="team_size" class="form-select" required>
+                  <option value="" disabled selected>Select squad capacity...</option>
+                  <option value="1-10">1 &ndash; 10 members (Startup Pod)</option>
+                  <option value="11-50">11 &ndash; 50 members (Scaling Squad)</option>
+                  <option value="51-200">51 &ndash; 200 members (Growth Division)</option>
+                  <option value="200+">200+ members (Global Enterprise)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="primary-goal" class="form-label">Primary Challenge</label>
+                <textarea id="primary-goal" name="message" class="form-textarea" rows="3" placeholder="Tell us what bottlenecks slow your team down..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block form-submit-btn">
+                <span>Request Enterprise Demo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <p class="form-disclaimer">
+                We respect your inbox. Zero spam. Fully encrypted end-to-end.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       7. FOOTER SECTION (LINKS, SOCIALS, METADATA & AUTHOR ATTRIBUTION)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <!-- Footer Top Grid -->
+      <div class="footer-top-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-logo footer-logo" aria-label="NovaFlow Home">
+            <span class="logo-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </span>
+            <span class="brand-name">Nova<span class="gradient-text">Flow</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Next-generation autonomous project intelligence. Unlocking seamless momentum and velocity for high-performing engineering squads worldwide.
+          </p>
+          <div class="internship-badge">
+            <span>Oasis Infobyte Internship &bull; Web Dev L1 Task 1</span>
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#features" class="footer-link">Platform Features</a></li>
+            <li><a href="#about" class="footer-link">About Mission</a></li>
+            <li><a href="#testimonials" class="footer-link">User Testimonials</a></li>
+            <li><a href="#contact" class="footer-link">Contact &amp; Demos</a></li>
+          </ul>
+        </div>
+
+        <!-- Solutions Column -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Solutions</h4>
+          <ul class="footer-links-list">
+            <li><a href="#features" class="footer-link">Autonomous Sprints</a></li>
+            <li><a href="#features" class="footer-link">Predictive Blocker Radar</a></li>
+            <li><a href="#features" class="footer-link">Workload Balancer</a></li>
+            <li><a href="#features" class="footer-link">Developer Flow State</a></li>
+            <li><a href="#features" class="footer-link">Security &amp; SOC2</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Location Column -->
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Direct Connect</h4>
+          <ul class="footer-links-list footer-contact-list">
+            <li>
+              <span class="contact-bullet">&bull;</span>
+              <a href="mailto:support@novaflow.ai" class="footer-link">support@novaflow.ai</a>
+            </li>
+            <li>
+              <span class="contact-bullet">&bull;</span>
+              <a href="tel:+18005550199" class="footer-link">+1 (800) 555-0199</a>
+            </li>
+            <li>
+              <span class="contact-bullet">&bull;</span>
+              <span class="footer-location">San Francisco, CA &bull; Global Remote</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar (Socials & Copyright) -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copy">
+          <p>&copy; 2026 NovaFlow Technologies Inc. All rights reserved.</p>
+          <p class="author-credit">
+            Crafted with passion by <strong>Mudassir Ahmed</strong> for Oasis Infobyte Web Development Internship.
+          </p>
+        </div>
+
+        <!-- Social Media Links (SVG Icons) -->
+        <div class="social-links-row" aria-label="Social media connections">
+          
+          <!-- Email Social -->
+          <a href="mailto:support@novaflow.ai" class="social-link" aria-label="Send us an email" title="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+
+          <!-- LinkedIn Social -->
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="NovaFlow LinkedIn Profile" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+
+          <!-- GitHub Social -->
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="NovaFlow GitHub Repositories" title="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+
+          <!-- X (Twitter) Social -->
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="NovaFlow on X (Twitter)" title="X / Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
