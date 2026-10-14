@@ -1,0 +1,1569 @@
+/* ==========================================================================
+   TRIBUTE PAGE: QUAID-E-AZAM MUHAMMAD ALI JINNAH
+   Oasis Infobyte Internship (OIBSIP) - Web Development Level 2, Task 2
+   Author: Mudassir Ahmed
+   Tech: Pure Semantic HTML5 & Vanilla CSS3 (No Frameworks, No JS)
+   ========================================================================== */
+
+/* ==========================================================================
+   1. CSS CUSTOM PROPERTIES (:root DESIGN TOKENS)
+   ========================================================================== */
+:root {
+  /* Brand Heritage Green Palette */
+  --color-primary-dark: #082218;       /* Deepest Heritage Green */
+  --color-primary-base: #0c3324;       /* Traditional Pakistan Dark Green */
+  --color-primary-medium: #144934;     /* Rich Forest Green */
+  --color-primary-light: #1e6147;      /* Vivid Emerald Accent */
+  
+  /* Imperial Warm Gold Accents */
+  --color-accent-gold: #c99f52;        /* Rich Burnished Gold */
+  --color-accent-gold-light: #e4c27d;  /* Shimmering Gold Highlight */
+  --color-accent-gold-soft: #f3e5c9;   /* Champagne / Warm Cream Gold */
+  --color-accent-gold-glow: rgba(201, 159, 82, 0.28);
+  
+  /* Background Color Bands (Required: Multiple distinct section backgrounds) */
+  --color-bg-hero: #082218;            /* Deep Green Hero */
+  --color-bg-cream: #faf7f0;           /* Warm Parchment / Linen Biography */
+  --color-bg-sand: #f3ede2;            /* Soft Sandstone Creed / Stats */
+  --color-bg-white: #ffffff;           /* Crisp Gallery White Timeline */
+  --color-bg-dark-quote: #051911;      /* Midnight Emerald Quote Band */
+  --color-bg-footer: #03120c;          /* Deepest Velvet Forest Footer */
+  
+  /* High-Contrast Typography Colors */
+  --color-text-main: #1c2720;          /* Deep Forest Charcoal for body */
+  --color-text-muted: #4e5e54;         /* Soft Charcoal for secondary copy */
+  --color-text-light: #f5f8f6;         /* Bright Cream for dark backgrounds */
+  --color-text-light-muted: #bdccc2;   /* Muted Sage for dark backgrounds */
+  
+  /* Structural Borders & Shadows */
+  --color-border-light: #e7dfd3;
+  --color-border-dark: rgba(201, 159, 82, 0.35);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 10px 30px rgba(12, 51, 36, 0.08);
+  --shadow-card-hover: 0 18px 45px rgba(12, 51, 36, 0.16);
+  --shadow-portrait: 0 20px 50px rgba(0, 0, 0, 0.35);
+  
+  /* Typography System (Exactly 2 Google Fonts) */
+  --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Spacing Scale */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 2.5rem;    /* 40px */
+  --spacing-xl: 4rem;      /* 64px */
+  --spacing-xxl: 6rem;     /* 96px */
+  
+  /* Layout Dimensions */
+  --container-max: 1180px;
+  --container-narrow: 840px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  
+  /* Smooth CSS Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   2. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-cream);
+  line-height: 1.75;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+/* Accessible focus outlines */
+:focus-visible {
+  outline: 2px solid var(--color-accent-gold);
+  outline-offset: 3px;
+}
+
+/* Universal Media Defaults */
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-primary-base);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-gold);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ==========================================================================
+   3. TYPOGRAPHY HIERARCHY
+   ========================================================================== */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  color: var(--color-primary-dark);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Reusable Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Reusable Section Headers */
+.section {
+  padding-top: var(--spacing-xxl);
+  padding-bottom: var(--spacing-xxl);
+  position: relative;
+  /* Accommodate sticky navbar when scrolling via jump links */
+  scroll-margin-top: 75px;
+}
+
+.section-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-kicker {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent-gold);
+  margin-bottom: 0.5rem;
+}
+
+.section-kicker-light {
+  color: var(--color-accent-gold-light);
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  color: var(--color-primary-dark);
+  margin-bottom: 0.75rem;
+}
+
+.section-title.text-light {
+  color: var(--color-text-light);
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.section-subtitle.text-light-muted {
+  color: var(--color-text-light-muted);
+}
+
+/* Heritage Gold Ornamental Divider */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem auto 0;
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-gold), transparent);
+  position: relative;
+}
+
+.gold-divider span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent-gold);
+  transform: rotate(45deg);
+  box-shadow: 0 0 6px var(--color-accent-gold-glow);
+}
+
+.gold-divider-light {
+  background: linear-gradient(90deg, transparent, var(--color-accent-gold-light), transparent);
+}
+
+.gold-divider-light span {
+  background-color: var(--color-accent-gold-light);
+}
+
+/* ==========================================================================
+   4. BUTTONS & UI INTERACTION
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-accent-gold);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 15px var(--color-accent-gold-glow);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-gold-light);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--color-accent-gold-glow);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--color-accent-gold);
+  border-color: var(--color-accent-gold);
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--color-accent-gold);
+  color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. HERO / HEADER SECTION (Background 1: Deep Heritage Green)
+   ========================================================================== */
+.hero {
+  background-color: var(--color-bg-hero);
+  color: var(--color-text-light);
+  min-height: min(80vh, 680px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 4.5rem 0 3.5rem;
+  overflow: hidden;
+  background-image: 
+    radial-gradient(circle at 50% 20%, rgba(20, 73, 52, 0.7) 0%, transparent 65%),
+    radial-gradient(circle at 85% 85%, rgba(201, 159, 82, 0.12) 0%, transparent 50%);
+}
+
+/* Elegant geometric motif overlay */
+.hero-pattern-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  animation: fadeInHero 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1.1rem;
+  background-color: rgba(201, 159, 82, 0.12);
+  border: 1px solid rgba(201, 159, 82, 0.3);
+  border-radius: 50px;
+  font-size: clamp(0.7rem, 2vw, 0.8125rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold-light);
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+}
+
+.hero-badge .gold-star {
+  font-size: 0.75rem;
+  color: var(--color-accent-gold);
+}
+
+.hero-title {
+  color: var(--color-text-light);
+  margin-bottom: 1.25rem;
+}
+
+.hero-title .title-sub {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: clamp(0.85rem, 1.8vw, 1.15rem);
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent-gold-soft);
+  margin-bottom: 0.5rem;
+}
+
+.hero-title .title-main {
+  display: block;
+  font-size: clamp(2.5rem, 6.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-title .title-name {
+  display: block;
+  font-size: clamp(1.6rem, 4vw, 2.75rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-accent-gold-light);
+  margin-top: 0.25rem;
+}
+
+.hero-tagline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.1vw, 1.5rem);
+  font-style: italic;
+  color: #e3ede6;
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+  padding: 0 0.5rem;
+}
+
+.hero-dates {
+  margin-bottom: 2rem;
+}
+
+.date-chip {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: clamp(0.78rem, 2.2vw, 0.9375rem);
+  letter-spacing: 0.08em;
+  color: var(--color-text-light-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.35rem 1rem;
+  max-width: 100%;
+}
+
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* CSS-Only Hero Fade In Animation */
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   6. STICKY NAVIGATION BAR (Pure CSS)
+   ========================================================================== */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(8, 34, 24, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201, 159, 82, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: var(--transition-fast);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+  gap: 1rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #ffffff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.brand-monogram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--color-accent-gold), #8f6828);
+  color: var(--color-primary-dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  border-radius: 50%;
+  letter-spacing: 0.05em;
+}
+
+.brand-text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-light-muted);
+  padding: 0.35rem 0.2rem;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-accent-gold);
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ==========================================================================
+   7. PROMINENT PORTRAIT SECTION (Gallery Frame & Vitals)
+   ========================================================================== */
+.section-portrait {
+  background-color: var(--color-bg-sand);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.portrait-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 2.75rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border-light);
+}
+
+/* Portrait figure with double gold filigree frame */
+.portrait-figure {
+  margin: 0;
+  text-align: center;
+}
+
+.portrait-image-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 400px;
+  border-radius: var(--radius-md);
+  padding: 12px;
+  background: linear-gradient(135deg, #f5ebd7, #ffffff 45%, #e6d3ad);
+  box-shadow: var(--shadow-portrait), inset 0 0 0 1px var(--color-accent-gold);
+  overflow: hidden;
+}
+
+/* Subtle gold filigree accent border */
+.portrait-image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed rgba(201, 159, 82, 0.6);
+  border-radius: calc(var(--radius-md) - 4px);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.portrait-img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: calc(var(--radius-md) - 6px);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+  filter: contrast(1.05) brightness(0.98);
+}
+
+.portrait-image-wrapper:hover .portrait-img {
+  transform: scale(1.02);
+}
+
+/* Graceful Fallback if image fails to load */
+.portrait-fallback {
+  position: absolute;
+  inset: 12px;
+  background: radial-gradient(circle, #144934 0%, #082218 100%);
+  color: var(--color-accent-gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border-radius: calc(var(--radius-md) - 6px);
+}
+
+.fallback-monogram {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-gold-light);
+}
+
+.fallback-text {
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light-muted);
+  text-transform: uppercase;
+}
+
+.portrait-caption {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-top: 1.25rem;
+  padding: 0 0.5rem;
+}
+
+.portrait-caption a {
+  color: var(--color-primary-base);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.portrait-caption a:hover {
+  color: var(--color-accent-gold);
+}
+
+/* Sidebar Vitals */
+.portrait-sidebar {
+  padding-left: 0.5rem;
+}
+
+.sidebar-title {
+  font-size: 1.75rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.sidebar-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-accent-gold);
+}
+
+.vitals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.vitals-list li {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.vital-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: var(--color-accent-gold);
+  margin-bottom: 0.15rem;
+}
+
+.vital-value {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+.signature-box {
+  background-color: var(--color-bg-cream);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signature-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.signature-img {
+  max-width: 190px;
+  filter: contrast(1.2) opacity(0.85);
+  transition: transform var(--transition-fast);
+}
+
+.signature-box:hover .signature-img {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   8. BIOGRAPHY / TRIBUTE SECTION (Background 2: Warm Parchment Cream)
+   ========================================================================== */
+.section-biography {
+  background-color: var(--color-bg-cream);
+}
+
+.bio-layout {
+  display: grid;
+  grid-template-columns: 2.1fr 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.bio-article {
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border-light);
+}
+
+.bio-chapter {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.bio-chapter:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.chapter-title {
+  font-size: 1.5rem;
+  color: var(--color-primary-base);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.chapter-num {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-accent-gold);
+  font-weight: 700;
+}
+
+.bio-article p {
+  font-size: 1.05rem;
+  color: #2b3930;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+/* Drop-cap for the very first letter of the biography */
+.bio-chapter:first-of-type p:first-of-type::first-letter {
+  font-family: var(--font-serif);
+  font-size: 3.75rem;
+  line-height: 0.85;
+  float: left;
+  margin-top: 0.15rem;
+  margin-right: 0.75rem;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  padding: 0.1rem;
+}
+
+/* Editorial Callout inside Bio */
+.bio-callout {
+  display: flex;
+  gap: 1.25rem;
+  background-color: var(--color-bg-sand);
+  border-left: 4px solid var(--color-accent-gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.callout-icon {
+  font-size: 1.75rem;
+  color: var(--color-accent-gold);
+  line-height: 1;
+}
+
+.callout-title {
+  font-size: 1.15rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.35rem;
+}
+
+.callout-body p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-text-main);
+  margin-bottom: 0;
+}
+
+/* Bio Companion Card (Supporting Visual) */
+.bio-companion {
+  position: sticky;
+  top: 95px;
+}
+
+.companion-card {
+  background-color: #ffffff;
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border-light);
+  text-align: center;
+}
+
+.companion-figure {
+  margin: 0 0 1.25rem;
+}
+
+.companion-img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  filter: contrast(1.05);
+  margin-bottom: 0.75rem;
+}
+
+.companion-caption {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+.companion-quote-snippet {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--color-primary-base);
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 1rem;
+}
+
+/* ==========================================================================
+   9. NATIONAL CREED SECTION (Unity, Faith, Discipline)
+   ========================================================================== */
+.section-creed {
+  background-color: var(--color-bg-sand);
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.creed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.creed-card {
+  background-color: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border-light);
+  position: relative;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.creed-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.creed-card-highlight {
+  border-color: var(--color-accent-gold);
+  background: linear-gradient(180deg, #ffffff 0%, #fbf8f2 100%);
+}
+
+.creed-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.creed-badge-num {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+}
+
+.creed-symbol {
+  font-size: 1.5rem;
+  color: var(--color-primary-base);
+}
+
+.creed-card-title {
+  font-size: 1.6rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+}
+
+.creed-card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   10. TIMELINE SECTION (Background 3: Gallery White with Center Line)
+   ========================================================================== */
+.section-timeline {
+  background-color: var(--color-bg-white);
+}
+
+.timeline-wrapper {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+/* Vertical Center Line on Desktop */
+.timeline-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    var(--color-accent-gold) 5%, 
+    var(--color-primary-medium) 50%, 
+    var(--color-accent-gold) 95%, 
+    transparent 100%
+  );
+  transform: translateX(-50%);
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  display: flex;
+}
+
+/* Alternating Left and Right on Desktop */
+.timeline-item-left {
+  left: 0;
+  padding-right: 3rem;
+  justify-content: flex-end;
+}
+
+.timeline-item-right {
+  left: 50%;
+  padding-left: 3rem;
+  justify-content: flex-start;
+}
+
+/* Timeline Center Marker Node */
+.timeline-marker {
+  position: absolute;
+  top: 22px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 4px solid var(--color-primary-base);
+  box-shadow: 0 0 0 4px var(--color-accent-gold-soft);
+  z-index: 5;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.timeline-item-left .timeline-marker {
+  right: -10px;
+}
+
+.timeline-item-right .timeline-marker {
+  left: -10px;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform: scale(1.3);
+  background-color: var(--color-accent-gold);
+  border-color: var(--color-primary-dark);
+}
+
+/* Timeline Cards */
+.timeline-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+  width: 100%;
+  position: relative;
+}
+
+.timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-accent-gold);
+}
+
+.timeline-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border-light);
+  padding-bottom: 0.4rem;
+}
+
+.timeline-year {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  line-height: 1;
+}
+
+.timeline-date {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary-light);
+}
+
+.timeline-card-title {
+  font-size: 1.25rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.6rem;
+}
+
+.timeline-card-body {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   11. MEMORABLE QUOTES SECTION (Background 4: Midnight Emerald Band)
+   ========================================================================== */
+.section-quotes {
+  background-color: var(--color-bg-dark-quote);
+  color: var(--color-text-light);
+  position: relative;
+  overflow: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(20, 73, 52, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(201, 159, 82, 0.15) 0%, transparent 45%);
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+}
+
+.quote-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 159, 82, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  position: relative;
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth), background-color var(--transition-smooth);
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent-gold-light);
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+/* Full width featured quote banner */
+.quote-card-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(20, 73, 52, 0.35) 0%, rgba(8, 34, 24, 0.8) 100%);
+  border: 1px solid var(--color-accent-gold);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.quote-ornament {
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--color-accent-gold);
+  opacity: 0.3;
+  position: absolute;
+  top: 1rem;
+  right: 1.75rem;
+  pointer-events: none;
+}
+
+.quote-blockquote {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  border-left: 3px solid var(--color-accent-gold);
+  padding-left: 1.5rem;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.quote-card-featured .quote-text {
+  font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+  color: #fffaf0;
+}
+
+.quote-citation {
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-author {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-accent-gold-light);
+  letter-spacing: 0.03em;
+}
+
+.quote-source {
+  font-size: 0.8125rem;
+  color: var(--color-text-light-muted);
+  line-height: 1.4;
+  margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   12. LEGACY & STATISTICAL TRIBUTE SECTION (Background 5: Soft Sandstone)
+   ========================================================================== */
+.section-legacy {
+  background-color: var(--color-bg-sand);
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-primary-base);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-gold);
+  margin-bottom: 0.5rem;
+}
+
+.stat-description {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.tribute-closing-banner {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary-base));
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  border: 1px solid var(--color-accent-gold);
+  box-shadow: var(--shadow-card);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.closing-emblem {
+  font-size: 2rem;
+  color: var(--color-accent-gold);
+  margin-bottom: 1rem;
+}
+
+.closing-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-style: italic;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.closing-author {
+  font-size: 0.9375rem;
+  color: var(--color-accent-gold-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   13. FOOTER (Background 6: Velvet Midnight Green)
+   ========================================================================== */
+.site-footer {
+  background-color: var(--color-bg-footer);
+  color: var(--color-text-light-muted);
+  padding-top: 4.5rem;
+  border-top: 1px solid rgba(201, 159, 82, 0.25);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.footer-brand .brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.footer-desc {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--color-text-light-muted);
+  max-width: 380px;
+}
+
+.footer-title {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background-color: var(--color-accent-gold);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-nav a {
+  font-size: 0.875rem;
+  color: var(--color-text-light-muted);
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.footer-nav a:hover {
+  color: var(--color-accent-gold-light);
+  padding-left: 4px;
+}
+
+.footer-meta-item {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-light-muted);
+}
+
+.footer-meta-item strong {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  padding: 1.75rem 0;
+  background-color: #020b07;
+}
+
+.footer-bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright-text,
+.license-notice {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
+}
+
+.copyright-text strong {
+  color: var(--color-accent-gold-light);
+}
+
+/* ==========================================================================
+   14. RESPONSIVE BREAKPOINTS (Mobile: 320px–767px, Tablet: 768px–1024px)
+   ========================================================================== */
+
+/* Tablets & Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .bio-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .bio-companion {
+    position: static;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .portrait-card {
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-col-about {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .portrait-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .portrait-sidebar {
+    padding-left: 0;
+  }
+
+  .sidebar-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .creed-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .quotes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* TIMELINE RESPONSIVE COLLAPSE:
+     Collapse center-line to a left-aligned vertical line on mobile screens.
+     All cards sit to the right of the line without overflow. */
+  .timeline-wrapper::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 3.25rem !important;
+    justify-content: flex-start !important;
+  }
+
+  .timeline-marker {
+    left: 10px !important;
+    right: auto !important;
+  }
+
+  .timeline-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .nav-links {
+    gap: 0.85rem;
+  }
+
+  .nav-link {
+    font-size: 0.8125rem;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Small Mobile Screens (max-width: 600px) */
+@media (max-width: 600px) {
+  .hero {
+    padding: 3.5rem 0 2.5rem;
+    min-height: auto;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    padding-bottom: 0.25rem;
+    gap: 0.85rem;
+  }
+
+  .bio-article {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .portrait-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 2.75rem !important;
+  }
+
+  .timeline-wrapper::before {
+    left: 14px;
+  }
+
+  .timeline-marker {
+    left: 4px !important;
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-card {
+    padding: 1.25rem;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ==========================================================================
+   15. PRINT STYLESHEET
+   ========================================================================== */
+@media print {
+  .sticky-nav,
+  .hero-cta-group,
+  .closing-action,
+  .btn {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .section {
+    padding: 2rem 0 !important;
+  }
+
+  .hero {
+    background: none !important;
+    color: #000000 !important;
+  }
+
+  .hero-title .title-main,
+  .hero-title .title-name {
+    color: #000000 !important;
+  }
+}
