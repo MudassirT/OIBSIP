@@ -83,15 +83,27 @@ Thumbs.db
 **/Thumbs.db
 .vscode/
 **/.vscode/
+# Java & Maven
+target/
+**/target/
+*.class
+**/*.class
+*.jar
+**/*.jar
+!**/gradle/wrapper/*.jar
+*.war
+**/*.war
+*.ear
+**/*.ear
+dependency-reduced-pom.xml
+**/dependency-reduced-pom.xml
 
-# Legacy task wrapper folders (local workspace only)
-/AAD Task 2/
-/AD Task 4/
-/Level 2 Task 1/
-/Level 2 Task 2/
-/Level 2 Task 3/
-/level 2 Task 4/
-/Level 3 Task 1/
-/Task 2 Oasis/
-/Task 3 Oasis/
-/Task1 Oasis/
+# SQLite & Local Databases
+*.db
+**/*.db
+*.db-journal
+**/*.db-journal
+*.db-wal
+**/*.db-wal
+*.db-shm
+**/*.db-shm
