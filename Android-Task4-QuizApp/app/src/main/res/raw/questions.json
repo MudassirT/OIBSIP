@@ -1,0 +1,327 @@
+[
+  {
+    "id": 1,
+    "category": "Object-Oriented Programming",
+    "question": "In Object-Oriented Programming, which principle allows a child class to provide a specific implementation of a method already defined in its parent class?",
+    "options": [
+      "Polymorphism",
+      "Encapsulation",
+      "Abstraction",
+      "Composition"
+    ],
+    "correctIndex": 0,
+    "explanation": "Polymorphism (specifically runtime polymorphism through method overriding) enables a subclass to supply its own tailored implementation of an inherited method."
+  },
+  {
+    "id": 2,
+    "category": "Data Structures",
+    "question": "Which data structure operates strictly on the Last-In-First-Out (LIFO) principle?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Binary Tree",
+      "Linked List"
+    ],
+    "correctIndex": 1,
+    "explanation": "A Stack pushes elements on top and pops elements from the top, adhering to the Last-In-First-Out (LIFO) protocol."
+  },
+  {
+    "id": 3,
+    "category": "Algorithms",
+    "question": "What is the worst-case time complexity of QuickSort when a naive pivot consistently splits the array unevenly?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n²)",
+      "O(log n)"
+    ],
+    "correctIndex": 2,
+    "explanation": "When the chosen pivot is always the smallest or largest element, QuickSort degrades to O(n²) comparisons."
+  },
+  {
+    "id": 4,
+    "category": "Web & Networking",
+    "question": "Which standard HTTP status code signifies that the requested resource could not be found on the server?",
+    "options": [
+      "404 Not Found",
+      "200 OK",
+      "500 Internal Server Error",
+      "301 Moved Permanently"
+    ],
+    "correctIndex": 0,
+    "explanation": "HTTP 404 indicates that the client was able to communicate with the server, but the requested URI could not be located."
+  },
+  {
+    "id": 5,
+    "category": "Databases",
+    "question": "In relational databases, which SQL clause is used to filter groups produced by an aggregate function?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "ORDER BY",
+      "GROUP BY"
+    ],
+    "correctIndex": 1,
+    "explanation": "The HAVING clause filters aggregated groups after GROUP BY, whereas WHERE filters individual rows before aggregation."
+  },
+  {
+    "id": 6,
+    "category": "Android Development",
+    "question": "Which Android component is designed to execute long-running background tasks without presenting a direct user interface?",
+    "options": [
+      "Activity",
+      "ContentProvider",
+      "Service",
+      "BroadcastReceiver"
+    ],
+    "correctIndex": 2,
+    "explanation": "A Service is an application component that can run in the background to handle long-running operations without a UI."
+  },
+  {
+    "id": 7,
+    "category": "Networking",
+    "question": "Which layer of the 7-layer OSI model manages end-to-end communication, connection establishment, and flow control (e.g., TCP)?",
+    "options": [
+      "Network Layer",
+      "Transport Layer",
+      "Data Link Layer",
+      "Session Layer"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Transport Layer (Layer 4) provides transparent, reliable data transfer and flow control between end systems."
+  },
+  {
+    "id": 8,
+    "category": "Operating Systems",
+    "question": "What condition occurs in an OS when two or more processes cannot proceed because each is waiting for the other to release a resource?",
+    "options": [
+      "Deadlock",
+      "Starvation",
+      "Race Condition",
+      "Thrashing"
+    ],
+    "correctIndex": 0,
+    "explanation": "Deadlock is a state where a set of processes are blocked because each process is holding a resource and waiting for another."
+  },
+  {
+    "id": 9,
+    "category": "Tech History",
+    "question": "Who is historically celebrated for writing the world's first computer algorithm for Charles Babbage's Analytical Engine?",
+    "options": [
+      "Alan Turing",
+      "Grace Hopper",
+      "Ada Lovelace",
+      "John von Neumann"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ada Lovelace translated Luigi Menabrea's memoir on Babbage's engine and appended an algorithm to compute Bernoulli numbers."
+  },
+  {
+    "id": 10,
+    "category": "Networking",
+    "question": "What does DNS stand for in Internet architecture?",
+    "options": [
+      "Data Network Service",
+      "Domain Name System",
+      "Digital Node Standard",
+      "Direct Network Socket"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Domain Name System (DNS) translates human-readable domain names (like google.com) into numerical IP addresses."
+  },
+  {
+    "id": 11,
+    "category": "Developer Tools",
+    "question": "In Git version control, which command creates a new branch and immediately checks it out?",
+    "options": [
+      "git branch -c <name>",
+      "git checkout -b <name>",
+      "git merge -b <name>",
+      "git switch --new-only <name>"
+    ],
+    "correctIndex": 1,
+    "explanation": "'git checkout -b <name>' creates the target branch and points HEAD to it in a single step (similarly 'git switch -c')."
+  },
+  {
+    "id": 12,
+    "category": "Programming Languages",
+    "question": "Which object-oriented language was created by James Gosling at Sun Microsystems and released in 1995?",
+    "options": [
+      "Java",
+      "C++",
+      "Python",
+      "Ruby"
+    ],
+    "correctIndex": 0,
+    "explanation": "James Gosling developed Java at Sun Microsystems under the motto 'Write Once, Run Anywhere' (WORA)."
+  },
+  {
+    "id": 13,
+    "category": "Android Development",
+    "question": "Which required file in every Android project declares the app's package name, permissions, and registered components?",
+    "options": [
+      "build.gradle",
+      "AndroidManifest.xml",
+      "strings.xml",
+      "MainActivity.java"
+    ],
+    "correctIndex": 1,
+    "explanation": "AndroidManifest.xml describes essential information about the application to the Android build tools and operating system."
+  },
+  {
+    "id": 14,
+    "category": "Operating Systems",
+    "question": "Which CPU scheduling algorithm assigns a fixed time slice (time quantum) to each runnable process in cyclic order?",
+    "options": [
+      "First-Come, First-Served (FCFS)",
+      "Shortest Job First (SJF)",
+      "Round Robin (RR)",
+      "Priority Scheduling"
+    ],
+    "correctIndex": 2,
+    "explanation": "Round Robin assigns a discrete time quantum to each process in the ready queue, offering fair CPU sharing."
+  },
+  {
+    "id": 15,
+    "category": "Databases",
+    "question": "What is the primary constraint used to ensure that every record in a relational database table is uniquely identifiable?",
+    "options": [
+      "Primary Key",
+      "Foreign Key",
+      "CHECK Constraint",
+      "DEFAULT Constraint"
+    ],
+    "correctIndex": 0,
+    "explanation": "A Primary Key constraint uniquely identifies each record in a table and cannot contain NULL values."
+  },
+  {
+    "id": 16,
+    "category": "Web Security",
+    "question": "What does the 'S' stand for in the secure web protocol HTTPS?",
+    "options": [
+      "Socket",
+      "Secure",
+      "Standard",
+      "Synchronous"
+    ],
+    "correctIndex": 1,
+    "explanation": "HTTPS stands for Hypertext Transfer Protocol Secure, encrypting HTTP requests using Transport Layer Security (TLS)."
+  },
+  {
+    "id": 17,
+    "category": "Data Structures",
+    "question": "Which data structure maps keys to values and provides an average time complexity of O(1) for search, insert, and delete?",
+    "options": [
+      "Hash Map / Hash Table",
+      "Binary Search Tree",
+      "Doubly Linked List",
+      "B-Tree"
+    ],
+    "correctIndex": 0,
+    "explanation": "A Hash Map utilizes a hash function to compute an index into an array of buckets, giving constant average time O(1)."
+  },
+  {
+    "id": 18,
+    "category": "Tech History",
+    "question": "Which computer scientist created the first compiler (A-0 system) and popularized the term 'debugging'?",
+    "options": [
+      "Grace Hopper",
+      "Margaret Hamilton",
+      "Dennis Ritchie",
+      "Barbara Liskov"
+    ],
+    "correctIndex": 0,
+    "explanation": "Rear Admiral Grace Hopper pioneered compiler technology, leading to the creation of FLOW-MATIC and COBOL."
+  },
+  {
+    "id": 19,
+    "category": "Networking",
+    "question": "What is a key fundamental difference between the transport protocols TCP and UDP?",
+    "options": [
+      "TCP is connection-oriented and reliable; UDP is connectionless and lightweight",
+      "UDP guarantees in-order arrival; TCP allows random packet loss",
+      "TCP is strictly hardware-based; UDP is software-based",
+      "UDP is used exclusively for encrypted web transactions"
+    ],
+    "correctIndex": 0,
+    "explanation": "TCP implements handshakes, acknowledgments, and packet retransmission, while UDP sends datagrams without establishing a connection."
+  },
+  {
+    "id": 20,
+    "category": "Programming Basics",
+    "question": "In the Java Virtual Machine (JVM), which mechanism automatically reclaims heap memory allocated to unreferenced objects?",
+    "options": [
+      "Garbage Collector (GC)",
+      "Just-In-Time (JIT) Compiler",
+      "Class Loader",
+      "Thread Scheduler"
+    ],
+    "correctIndex": 0,
+    "explanation": "The Java Garbage Collector tracks object references and automatically frees memory from objects that can no longer be reached."
+  },
+  {
+    "id": 21,
+    "category": "Web Architecture",
+    "question": "Which open-source browser rendering engine was developed by Apple and originally forked by Google to build Blink?",
+    "options": [
+      "Gecko",
+      "WebKit",
+      "Trident",
+      "Presto"
+    ],
+    "correctIndex": 1,
+    "explanation": "WebKit powers Apple Safari and was originally forked from KHTML, and later forked by Google in 2013 to form Blink."
+  },
+  {
+    "id": 22,
+    "category": "Networking",
+    "question": "What is the standard, default TCP port used for standard unencrypted HTTP traffic?",
+    "options": [
+      "80",
+      "443",
+      "22",
+      "21"
+    ],
+    "correctIndex": 0,
+    "explanation": "Port 80 is the default port assigned by IANA for HTTP traffic, while port 443 is assigned for HTTPS."
+  },
+  {
+    "id": 23,
+    "category": "Android Development",
+    "question": "In the Android Activity lifecycle, which method is invoked when an activity enters the foreground and is ready for user interaction?",
+    "options": [
+      "onStart()",
+      "onCreate()",
+      "onResume()",
+      "onRestart()"
+    ],
+    "correctIndex": 2,
+    "explanation": "onResume() is called right before the activity starts interacting with the user, placing the activity at the top of the activity stack."
+  },
+  {
+    "id": 24,
+    "category": "Databases",
+    "question": "What does the acronym 'ACID' represent in database transaction processing?",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Access, Control, Integrity, Distribution",
+      "Authentication, Concurrency, Indexing, Delivery",
+      "Accuracy, Completeness, Independence, Determinism"
+    ],
+    "correctIndex": 0,
+    "explanation": "ACID properties ensure that database transactions are processed reliably even in the event of crashes or errors."
+  },
+  {
+    "id": 25,
+    "category": "Algorithms",
+    "question": "Which search algorithm achieves logarithmic O(log n) time complexity by repeatedly halving the search interval on a sorted list?",
+    "options": [
+      "Linear Search",
+      "Binary Search",
+      "Breadth-First Search",
+      "Depth-First Search"
+    ],
+    "correctIndex": 1,
+    "explanation": "Binary Search compares the target value to the middle element, eliminating half of the search range at each comparison."
+  }
+]

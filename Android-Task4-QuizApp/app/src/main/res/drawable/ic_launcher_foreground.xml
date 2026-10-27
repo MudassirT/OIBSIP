@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.65"
+        android:scaleY="0.65"
+        android:translateX="18.9"
+        android:translateY="18.9">
+        <!-- Brain Left -->
+        <path
+            android:pathData="M54,34 C44,34 36,42 36,52 C36,55 37,58 39,60 C36,63 34,67 34,72 C34,80 40,86 48,86 C50,86 52,85 54,84 L54,34 Z"
+            android:fillColor="#FFFFFF" />
+        <!-- Brain Right -->
+        <path
+            android:pathData="M66,34 L66,84 C68,85 70,86 72,86 C80,86 86,80 86,72 C86,67 84,63 81,60 C83,58 84,55 84,52 C84,42 76,34 66,34 Z"
+            android:fillColor="#FFFFFF" />
+        <!-- Lightning Bolt -->
+        <path
+            android:pathData="M63,20 L44,60 L58,60 L54,96 L76,52 L62,52 Z"
+            android:fillColor="#38BDF8" />
+    </group>
+</vector>

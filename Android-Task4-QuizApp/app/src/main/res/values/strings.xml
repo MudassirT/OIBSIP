@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">BrainBlitz</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_title">BrainBlitz</string>
+    <string name="welcome_tagline">Test your Computer Science &amp; Tech Mastery</string>
+    <string name="welcome_description">10 questions. How many can you get right?</string>
+    <string name="welcome_btn_start">Start Quiz</string>
+    <string name="welcome_best_score_label">Personal Best</string>
+    <string name="welcome_best_score_format">%1$d / %2$d (%3$d%%)</string>
+    <string name="welcome_no_score_yet">No previous attempts yet. Take the blitz!</string>
+    <string name="welcome_rules_heading">Quiz Rules</string>
+    <string name="welcome_rule_1">10 randomly selected CS &amp; Tech questions per round</string>
+    <string name="welcome_rule_2">25-second countdown timer for each question</string>
+    <string name="welcome_rule_3">Immediate feedback with detailed explanations</string>
+    <string name="welcome_topics_pill">Algorithms • OS • Networks • DB • Android</string>
+
+    <!-- Quiz Screen -->
+    <string name="quiz_question_counter">Question %1$d of %2$d</string>
+    <string name="quiz_live_score">Score: %1$d</string>
+    <string name="quiz_timer_format">%1$ds</string>
+    <string name="quiz_btn_next">Next Question</string>
+    <string name="quiz_btn_see_results">See Results</string>
+    <string name="quiz_explanation_header">Explanation</string>
+    <string name="quiz_feedback_correct">Correct! ✓</string>
+    <string name="quiz_feedback_wrong">Incorrect ✗</string>
+    <string name="quiz_feedback_timeout">Time is up! ⏱</string>
+    <string name="quiz_option_prefix_a">A</string>
+    <string name="quiz_option_prefix_b">B</string>
+    <string name="quiz_option_prefix_c">C</string>
+    <string name="quiz_option_prefix_d">D</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_quit_title">Quit Quiz?</string>
+    <string name="dialog_quit_message">Are you sure you want to quit? Your current round progress will be lost.</string>
+    <string name="dialog_quit_confirm">Quit</string>
+    <string name="dialog_quit_cancel">Resume</string>
+
+    <!-- Results Screen -->
+    <string name="results_title">Quiz Completed</string>
+    <string name="results_score_format">%1$d / %2$d</string>
+    <string name="results_percentage_format">%1$d%%</string>
+    <string name="results_correct_stat">Correct: %1$d</string>
+    <string name="results_incorrect_stat">Incorrect: %1$d</string>
+    <string name="results_timed_out_stat">Timed Out: %1$d</string>
+    <string name="results_best_score_format">Personal Best: %1$d / %2$d (%3$d%%)</string>
+    <string name="results_new_high_score">★ NEW HIGH SCORE! ★</string>
+    <string name="results_btn_restart">Play Again</string>
+    <string name="results_btn_home">Back to Home</string>
+    <string name="results_btn_review">Review Answers (%1$d questions)</string>
+    <string name="results_stat_accuracy">Accuracy</string>
+    <string name="results_stat_score">Final Score</string>
+
+    <!-- Performance Ratings -->
+    <string name="rating_outstanding">Outstanding! Tech Mastermind! 🏆</string>
+    <string name="rating_great">Great Job! Solid tech foundation! ⚡</string>
+    <string name="rating_good">Good Effort! Keep sharpening your skills! 💡</string>
+    <string name="rating_keep_practicing">Keep Practicing! Every try builds knowledge! 🚀</string>
+
+    <!-- Review Dialog / Screen -->
+    <string name="review_title">Question Review</string>
+    <string name="review_your_answer">Your answer: %1$s</string>
+    <string name="review_correct_answer">Correct answer: %1$s</string>
+    <string name="review_status_correct">Correct</string>
+    <string name="review_status_incorrect">Incorrect</string>
+    <string name="review_status_timeout">Timed Out</string>
+    <string name="review_close">Close</string>
+
+    <!-- Content Descriptions & Accessibility -->
+    <string name="cd_app_logo">BrainBlitz logo</string>
+    <string name="cd_timer_icon">Timer icon</string>
+    <string name="cd_correct_icon">Correct answer checkmark</string>
+    <string name="cd_wrong_icon">Incorrect answer cross</string>
+    <string name="cd_high_score_icon">High score trophy</string>
+</resources>

@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Circle background gradient effect -->
+    <path
+        android:pathData="M60,8 C88.7,8 112,31.3 112,60 C112,88.7 88.7,112 60,112 C31.3,112 8,88.7 8,60 C8,31.3 31.3,8 60,8 Z"
+        android:fillColor="#4F46E5" />
+
+    <!-- Brain left hemisphere -->
+    <path
+        android:pathData="M54,34 C44,34 36,42 36,52 C36,55 37,58 39,60 C36,63 34,67 34,72 C34,80 40,86 48,86 C50,86 52,85 54,84 L54,34 Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9" />
+
+    <!-- Brain right hemisphere -->
+    <path
+        android:pathData="M66,34 L66,84 C68,85 70,86 72,86 C80,86 86,80 86,72 C86,67 84,63 81,60 C83,58 84,55 84,52 C84,42 76,34 66,34 Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.9" />
+
+    <!-- Lightning Blitz across the center -->
+    <path
+        android:pathData="M63,22 L45,62 L59,62 L55,98 L77,54 L62,54 Z"
+        android:fillColor="#06B6D4" />
+</vector>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand Primary (Indigo) -->
+    <color name="primary">#4F46E5</color>
+    <color name="primary_dark">#3730A3</color>
+    <color name="primary_light">#EEF2FF</color>
+    <color name="primary_variant">#4338CA</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Secondary / Accent (Cyan / Teal) -->
+    <color name="secondary">#06B6D4</color>
+    <color name="secondary_variant">#0891B2</color>
+    <color name="on_secondary">#FFFFFF</color>
+
+    <!-- Background and Surface -->
+    <color name="background">#F8FAFC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F1F5F9</color>
+    <color name="card_stroke">#E2E8F0</color>
+
+    <!-- Typography -->
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_tertiary">#94A3B8</color>
+    <color name="text_white">#FFFFFF</color>
+
+    <!-- Quiz Feedback Colors (Reserved strictly for answer states) -->
+    <color name="feedback_correct">#16A34A</color>
+    <color name="feedback_correct_bg">#DCFCE7</color>
+    <color name="feedback_correct_stroke">#22C55E</color>
+
+    <color name="feedback_wrong">#DC2626</color>
+    <color name="feedback_wrong_bg">#FEE2E2</color>
+    <color name="feedback_wrong_stroke">#EF4444</color>
+
+    <color name="feedback_timed_out">#EA580C</color>
+    <color name="feedback_timed_out_bg">#FFEDD5</color>
+
+    <!-- Option Cards Normal State -->
+    <color name="option_bg_normal">#FFFFFF</color>
+    <color name="option_stroke_normal">#CBD5E1</color>
+    <color name="option_badge_bg">#EEF2FF</color>
+    <color name="option_badge_text">#4F46E5</color>
+
+    <!-- Highlights & Badges -->
+    <color name="badge_high_score">#F59E0B</color>
+    <color name="badge_high_score_bg">#FEF3C7</color>
+    <color name="badge_category_bg">#E0E7FF</color>
+    <color name="badge_category_text">#3730A3</color>
+
+    <!-- Progress & Timer -->
+    <color name="progress_track">#E2E8F0</color>
+    <color name="timer_normal">#4F46E5</color>
+    <color name="timer_warning">#F59E0B</color>
+    <color name="timer_critical">#EF4444</color>
+</resources>
