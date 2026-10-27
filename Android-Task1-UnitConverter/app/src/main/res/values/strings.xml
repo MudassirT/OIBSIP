@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">UnitSwitch</string>
+    <string name="app_tagline">Smart Offline Unit Converter</string>
+
+    <!-- Categories -->
+    <string name="category_length">Length</string>
+    <string name="category_weight">Weight</string>
+    <string name="category_temperature">Temperature</string>
+    <string name="category_volume">Volume</string>
+    <string name="category_speed">Speed</string>
+
+    <!-- UI Labels & Hints -->
+    <string name="label_select_category">Measurement Category</string>
+    <string name="label_input_value">Enter value</string>
+    <string name="hint_input_value">e.g. 100 or -40</string>
+    <string name="label_source_unit">From</string>
+    <string name="label_target_unit">To</string>
+    <string name="btn_convert">Convert</string>
+    <string name="btn_swap_content_desc">Swap source and target units</string>
+    <string name="btn_copy_content_desc">Copy result to clipboard</string>
+    <string name="btn_copy">Copy</string>
+    <string name="switch_live_conversion">Live Conversion</string>
+
+    <!-- Result Card -->
+    <string name="label_result_title">Converted Result</string>
+    <string name="placeholder_result">Enter a number and tap Convert to see the result</string>
+    <string name="label_formula_format">%1$s</string>
+
+    <!-- Validation & Error Messages -->
+    <string name="error_empty_input">Please enter a value to convert</string>
+    <string name="error_invalid_number">Please enter a valid numeric value</string>
+    <string name="error_below_absolute_zero">Value cannot be below absolute zero (-273.15 °C / -459.67 °F / 0 K)</string>
+    <string name="toast_empty_or_invalid">Please enter a valid numeric value</string>
+    <string name="toast_below_absolute_zero">Value is below absolute zero for this unit</string>
+    <string name="snackbar_copied">Result copied to clipboard</string>
+
+    <!-- Length Units -->
+    <string name="unit_millimetre">Millimetre</string>
+    <string name="unit_centimetre">Centimetre</string>
+    <string name="unit_metre">Metre</string>
+    <string name="unit_kilometre">Kilometre</string>
+    <string name="unit_inch">Inch</string>
+    <string name="unit_foot">Foot</string>
+    <string name="unit_yard">Yard</string>
+    <string name="unit_mile">Mile</string>
+
+    <!-- Weight Units -->
+    <string name="unit_milligram">Milligram</string>
+    <string name="unit_gram">Gram</string>
+    <string name="unit_kilogram">Kilogram</string>
+    <string name="unit_tonne">Tonne</string>
+    <string name="unit_ounce">Ounce</string>
+    <string name="unit_pound">Pound</string>
+
+    <!-- Temperature Units -->
+    <string name="unit_celsius">Celsius</string>
+    <string name="unit_fahrenheit">Fahrenheit</string>
+    <string name="unit_kelvin">Kelvin</string>
+
+    <!-- Volume Units -->
+    <string name="unit_millilitre">Millilitre</string>
+    <string name="unit_litre">Litre</string>
+    <string name="unit_cubic_metre">Cubic Metre</string>
+    <string name="unit_teaspoon_us">Teaspoon (US)</string>
+    <string name="unit_tablespoon_us">Tablespoon (US)</string>
+    <string name="unit_fluid_ounce_us">Fluid Ounce (US)</string>
+    <string name="unit_cup_us">Cup (US)</string>
+    <string name="unit_gallon_us">Gallon (US)</string>
+
+    <!-- Speed Units -->
+    <string name="unit_mps">m/s</string>
+    <string name="unit_kmph">km/h</string>
+    <string name="unit_mph">mph</string>
+    <string name="unit_knot">knot</string>
+</resources>

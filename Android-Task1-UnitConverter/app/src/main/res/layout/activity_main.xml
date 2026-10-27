@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/spacing_medium"
+        android:paddingEnd="@dimen/spacing_medium"
+        android:paddingTop="@dimen/spacing_medium"
+        android:paddingBottom="@dimen/spacing_xlarge">
+
+        <!-- App Header Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/spacing_medium">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_convert"
+                app:tint="@color/primary"
+                android:contentDescription="@null"
+                android:layout_marginEnd="@dimen/spacing_small" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAppTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAppTagline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_tagline"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_caption" />
+            </LinearLayout>
+
+            <!-- Live Conversion Switch -->
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchLiveConversion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:contentDescription="@string/switch_live_conversion"
+                app:thumbTint="@color/on_primary"
+                app:trackTint="@color/primary" />
+        </LinearLayout>
+
+        <!-- Category Selector Section -->
+        <TextView
+            android:id="@+id/tvCategoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_select_category"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_subtitle"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/spacing_small" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_marginBottom="@dimen/spacing_medium">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:singleLine="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipLength"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_length"
+                    app:chipIcon="@drawable/ic_cat_length"
+                    android:checked="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipWeight"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_weight"
+                    app:chipIcon="@drawable/ic_cat_weight" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipTemperature"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_temperature"
+                    app:chipIcon="@drawable/ic_cat_temperature" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipVolume"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_volume"
+                    app:chipIcon="@drawable/ic_cat_volume" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSpeed"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_speed"
+                    app:chipIcon="@drawable/ic_cat_speed" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <!-- Main Input and Unit Conversion Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardInput"
+            style="@style/Widget.UnitSwitch.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_medium">
+
+                <!-- Numeric Input Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutValue"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_input_value"
+                    app:boxCornerRadiusBottomEnd="@dimen/radius_small"
+                    app:boxCornerRadiusBottomStart="@dimen/radius_small"
+                    app:boxCornerRadiusTopEnd="@dimen/radius_small"
+                    app:boxCornerRadiusTopStart="@dimen/radius_small"
+                    app:endIconMode="clear_text"
+                    app:errorEnabled="true"
+                    android:layout_marginBottom="@dimen/spacing_small">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_input_value"
+                        android:inputType="numberSigned|numberDecimal"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_body"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Unit Spinners & Swap Button Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/spacing_medium">
+
+                    <!-- Source Unit Container -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvSourceLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_source_unit"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/text_caption"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="@dimen/spacing_xxsmall" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="@drawable/bg_spinner">
+
+                            <Spinner
+                                android:id="@+id/spinnerSourceUnit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:spinnerMode="dropdown"
+                                android:overlapAnchor="false" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="end|center_vertical"
+                                android:layout_marginEnd="@dimen/spacing_small"
+                                android:src="@drawable/ic_arrow_drop_down"
+                                android:contentDescription="@null" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <!-- Swap Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSwapUnits"
+                        style="@style/Widget.UnitSwitch.Button.Swap"
+                        android:layout_width="@dimen/swap_button_size"
+                        android:layout_height="@dimen/swap_button_size"
+                        android:layout_marginStart="@dimen/spacing_small"
+                        android:layout_marginEnd="@dimen/spacing_small"
+                        android:layout_marginTop="14dp"
+                        app:icon="@drawable/ic_swap_horiz"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconTint="@color/primary"
+                        android:contentDescription="@string/btn_swap_content_desc" />
+
+                    <!-- Target Unit Container -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTargetLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_target_unit"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/text_caption"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="@dimen/spacing_xxsmall" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spinner_height"
+                            android:background="@drawable/bg_spinner">
+
+                            <Spinner
+                                android:id="@+id/spinnerTargetUnit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:spinnerMode="dropdown"
+                                android:overlapAnchor="false" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="end|center_vertical"
+                                android:layout_marginEnd="@dimen/spacing_small"
+                                android:src="@drawable/ic_arrow_drop_down"
+                                android:contentDescription="@null" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Convert Action Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnConvert"
+                    style="@style/Widget.UnitSwitch.Button.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/btn_convert"
+                    app:icon="@drawable/ic_convert"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/on_primary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Result Card Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardResult"
+            style="@style/Widget.UnitSwitch.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_medium">
+
+                <!-- Placeholder state (before first conversion) -->
+                <LinearLayout
+                    android:id="@+id/layoutPlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/spacing_large"
+                    android:paddingBottom="@dimen/spacing_large">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_convert"
+                        app:tint="@color/text_hint"
+                        android:contentDescription="@null"
+                        android:layout_marginBottom="@dimen/spacing_small" />
+
+                    <TextView
+                        android:id="@+id/tvPlaceholder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/placeholder_result"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_body"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <!-- Active Result Display (after conversion) -->
+                <LinearLayout
+                    android:id="@+id/layoutResultContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/spacing_small">
+
+                        <TextView
+                            android:id="@+id/tvResultHeader"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_result_title"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="@dimen/text_subtitle"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnCopyResult"
+                            style="@style/Widget.UnitSwitch.Button.Tonal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:text="@string/btn_copy"
+                            app:icon="@drawable/ic_content_copy"
+                            app:iconSize="16dp"
+                            android:textSize="@dimen/text_caption"
+                            android:contentDescription="@string/btn_copy_content_desc" />
+                    </LinearLayout>
+
+                    <!-- Large Display of Result Value -->
+                    <TextView
+                        android:id="@+id/tvResultLarge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/text_result_large"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_xxsmall"
+                        tools:text="39.3701 in" />
+
+                    <!-- Full Equation ("100 cm = 39.3701 in") -->
+                    <TextView
+                        android:id="@+id/tvResultEquation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_body"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="@dimen/spacing_small"
+                        tools:text="100 cm = 39.3701 in" />
+
+                    <!-- Formula / Rate Note -->
+                    <TextView
+                        android:id="@+id/tvResultFormula"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_caption"
+                        tools:text="1 cm = 0.01 m" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
