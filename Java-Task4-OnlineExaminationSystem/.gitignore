@@ -1,0 +1,23 @@
+# Maven build output
+target/
+out/
+
+# SQLite Database files
+*.db
+*.db-journal
+*.sqlite
+data/*.db
+data/*.sqlite
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS specific
+Thumbs.db
+Desktop.ini
+.DS_Store
